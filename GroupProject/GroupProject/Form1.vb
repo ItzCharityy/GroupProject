@@ -17,12 +17,19 @@
         PT(0, 3, "TB")
 
         Countries = New Country
+        
+        
+        '<<.................We are getting the countries NAME and displaying it.................>>        
         Countries.Name = InputBox("Name")
         txtName.Text = Countries.Name
 
+        
+        '<<.................We are getting the countries 'POPULATION' and displaying it.................>>        
         Countries.Population = CInt(InputBox("Population"))
         txtPopulation.Text = CStr(Countries.Population)
-
+        
+        
+        '<<.................We get the development of the country and diplaying it.................>>
         Dim EcoDevChoose As Integer = CInt(InputBox("Economic Development(Choose a Number) " & Environment.NewLine & "1) Developed " & Environment.NewLine & "2) Developing "))
         If EcoDevChoose = 1 Then
             Countries.EconomicDevelpment = "Developed"
@@ -32,6 +39,9 @@
             txtEcoDev.Text = Countries.EconomicDevelpment
         End If
 
+        
+        
+        
         '<<.................Up Casting.................>>
 
         Dim Choice As Integer
@@ -62,38 +72,41 @@
             End Select
 
         Next Choice
-
-
-
-
-
-
-
     End Sub
+
+
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        '<<.................PolyMophSm.................>>
-
+        
+    '<<.................polymorphism.................>>
         For A As Integer = 1 To 3
+    'NOTE THIS IS FOR TESTING AND DEBUGGING
             MsgBox(Countries.Diseases(A).GetTypeOfDisease)
         Next
+
+
     End Sub
+
+
+
+
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
         '<<.................DownCasting.................>>
-
         Dim cause As Malaria
+        'NOTE THIS IS FOR TESTING AND DEBUGGING
         For A As Integer = 1 To 3
             cause = TryCast(Countries.Diseases(A), Malaria)
             If Not (cause Is Nothing) Then
                 MsgBox(cause.Caouse)
-
             End If
         Next
 
     End Sub
+
+
 
 
 End Class
