@@ -32,8 +32,6 @@
             txtEcoDev.Text = Countries.EconomicDevelpment
         End If
 
-
-
         '<<.................Up Casting.................>>
 
         Dim Choice As Integer
@@ -43,20 +41,23 @@
 
                     Dim covid_19 As Covid_19 = New Covid_19
                     'Get Infomation About Covid_19
+                    '.........
+                    '.........
+                    '.........
                     Countries.Diseases(Choice) = covid_19
-
-
                 Case 2
-
-
                     Dim malaria As Malaria = New Malaria
                     'Get Infomation About Malaria
+                    '.........
+                    '.........
+                    '.........
                     Countries.Diseases(Choice) = malaria
-
-
                 Case 3
                     Dim tb As TB = New TB
                     'Get Infomation About Covid_19
+                    '.........
+                    '.........
+                    '.........
                     Countries.Diseases(Choice) = tb
             End Select
 
