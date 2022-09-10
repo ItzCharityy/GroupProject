@@ -4,11 +4,15 @@
     Private _Population As Integer
     Private _Diseases() As Disease
     Private _EconomicDevelpment As String
-
+   
+    
+    'NOTE THIS IS FOR TESTING AND DEBUGGING
     Public Sub New()
         ReDim _Diseases(3)
         '_Diseases(a) = New Disease
     End Sub
+  
+     'NOTE THIS IS FOR TESTING AND DEBUGGING   
     Public Sub New(Choice)
         ReDim Preserve _Diseases(Choice)
         '_Diseases(a) = New Disease
